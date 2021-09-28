@@ -1,0 +1,70 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace projEventos
+{
+    class Eventp
+    {
+        private int id;
+        private string descricao ;
+        qtdMaxPart int;
+        participantes Participante[];
+        
+
+        public int Id
+        {
+            get { return id; }
+      
+        }
+        
+        
+        public string Descricao
+        {
+            get {return descricao;}
+        } 
+        
+        
+        public Participante[] oParticipante
+        {
+            get {return Participante;}
+        } 
+        
+        {
+            get { return id; }
+      
+        }
+        
+           public int qtdeMax
+        {
+            get { return qtdMaxPart; }
+      
+        }
+
+
+        public Evento(int qtdMaxPart)
+        {
+            this.id = id;
+            this.descricao = descricao;
+            this.qtdMaxPart = qtdMaxPart;
+            for (i = 0; i <= this.qtdMaxPart; i++){
+            
+                this.oParticipante[i] = new Participante ("", "");
+            }
+        }
+        
+               public override string ToString()
+        {
+            string dados = "";
+            foreach (Participante p in this.oParticipante)
+                dados += v.ToString();
+            dados += "------------------";
+            return dados;
+        }
+      
+      public void inscreverParticipante(int dia)
+       
+
+    }
+}
