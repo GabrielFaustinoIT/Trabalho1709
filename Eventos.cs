@@ -27,33 +27,11 @@ namespace projVendasCA
         }
         
         
-        public Participante pesquisarParticipante(Participante p)
-        {
-            Participante participanteAchado = new Participante();
-            int i = participanteAchado.qtdMaxPart;
-            if (!this.oParticipante[i].Equals(p)){
-          
-        vendedorAchado = this.osVendedores[i];
-            }
-            return vendedorAchado;
-        }
 
-        public double valorVendas()
-        {
-            double totVendas = 0;
-            foreach (Venda v in this.asVendas)
-                totVendas += v.Valor;
-            return totVendas;
-        }
-
-        public double valorComissao()
-        {
-            return this.valorVendas() * (this.percComissao / 100);
-        }
 
         public override bool Equals(object obj)
         {
-            return this.id.Equals(((Vendedor)obj).id);
+            return this.email.Equals(((Particpante)obj).email);
         }
 
         public override string ToString()
@@ -64,7 +42,16 @@ namespace projVendasCA
                    this.valorVendas().ToString() + " - " +
                    this.valorComissao().ToString() + '\n';
         }
-
+        
+                public bool addParticipante(Participante participante)
+        {
+            bool podeAdd = (this.qtde < this.max);
+            if (podeAdd)
+            {
+                this.oParticipante[this.qtdMaxPart] = participante;
+                this.qtdMaxPart++;
+            }
+            return podeAdd;
 
     }
 }
