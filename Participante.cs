@@ -36,7 +36,14 @@ namespace projEventos
         {
         }
 
-      
+      public bool podeInscrever(Eventos e)
+      {
+          int i;
+            if (i < e.qtdParticipantes )
+            {
+                
+            }
+      }
 
 
 
