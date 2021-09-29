@@ -62,6 +62,9 @@ namespace projEventos
             dados += "------------------";
             return dados;
         }
+        
+     
+        }
       
       public void inscreverParticipante(int dia)
        
