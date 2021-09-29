@@ -5,7 +5,7 @@ using System.Text;
 
 namespace projEventos
 {
-    class Eventp
+    class Evento
     {
         private int id;
         private string descricao ;
@@ -54,7 +54,26 @@ namespace projEventos
             }
         }
         
-               public override string ToString()
+ 
+        
+     
+        }
+        
+        public Participante pesquisarParticipante(Participante p)
+        {
+            Participante participanteAchado = new Participante();
+            int i = participanteAchado.qtdMaxPart;
+            if (!this.oParticipante[i].Equals(p)){
+          
+      participanteAchado = this.oParticipante[i];
+            }
+            return participanteAchado;
+        }
+      
+      
+ 
+       
+                     public override string ToString()
         {
             string dados = "";
             foreach (Participante p in this.oParticipante)
@@ -63,11 +82,10 @@ namespace projEventos
             return dados;
         }
         
-     
+                public override bool Equals(object obj)
+        {
+            return this.id.Equals(((Evento)obj).id);
         }
-      
-      public void inscreverParticipante(int dia)
-       
 
     }
 }
