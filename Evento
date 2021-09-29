@@ -59,17 +59,7 @@ namespace projEventos
      
         }
         
-        public Participante pesquisarParticipante(Participante p)
-        {
-            Participante participanteAchado = new Participante();
-            int i = participanteAchado.qtdMaxPart;
-            if (!this.oParticipante[i].Equals(p)){
-          
-      participanteAchado = this.oParticipante[i];
-            }
-            return participanteAchado;
-        }
-      
+     
       
  
        
