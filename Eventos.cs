@@ -43,15 +43,17 @@ namespace projVendasCA
                    this.valorComissao().ToString() + '\n';
         }
         
-                public bool addParticipante(Participante participante)
-        {
-            bool podeAdd = (this.qtde < this.max);
+
+             public void addEvento(Evento e)
+      {
+              bool podeAdd = (this.qtdMaxPart < this.qtdeMaxPart);
             if (podeAdd)
             {
                 this.oParticipante[this.qtdMaxPart] = participante;
                 this.qtdMaxPart++;
             }
             return podeAdd;
+      }
+}
 
-    }
 }
