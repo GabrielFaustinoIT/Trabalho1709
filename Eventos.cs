@@ -26,6 +26,18 @@ namespace projVendasCA
             this.osEventos[dia - 1] = e;
         }
         
+           public Participante pesquisarParticipante(Participante p)
+        {
+            Participante participanteAchado = new Participante();
+            int i = participanteAchado.qtdMaxPart;
+            if (!this.oParticipante[i].Equals(p)){
+          
+      participanteAchado = this.oParticipante[i];
+            }
+            return participanteAchado;
+        }
+      
+        
         
 
 
