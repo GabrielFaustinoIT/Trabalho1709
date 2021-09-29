@@ -59,15 +59,11 @@ namespace projEventos
      
         }
         
-     
-      
- 
-       
-                     public override string ToString()
+         public string listaParticipantes()
         {
             string dados = "";
             foreach (Participante p in this.oParticipante)
-                dados += v.ToString();
+                dados += p;
             dados += "------------------";
             return dados;
         }
